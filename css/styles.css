@@ -1,0 +1,32 @@
+body {
+    font-family: "Zalando Sans";
+    padding: 0.5rem;
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;  
+    margin: 0 auto;      
+    padding: 1rem 2rem;  
+}
+nav {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
