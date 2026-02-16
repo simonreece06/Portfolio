@@ -1,18 +1,20 @@
 body {
-    font-family: "Zalando Sans";
-    padding: 0.5rem;
+    font-family: "Zalando Sans", Arial, sans-serif;
+    padding: 0 0.5rem;
     margin: 0;
 
 }
 
 header {
     display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;   
 }
 
 .container {
-    max-width: 1200px;  
+
     margin: 0 auto;      
-    padding: 1rem 2rem;  
+    padding: 0;  
 }
 nav {
     display: flex;
@@ -30,3 +32,36 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
+.hero {
+    background: url("../images/reyazul-haque-SWX3-hmLXKM-unsplash.jpg") center / cover no-repeat;    
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-text {
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7); /* black at 50% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-text h2 {
+    font-size: 5rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.hero-text p {
+    color: white;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
