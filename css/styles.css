@@ -2,13 +2,30 @@ body {
     font-family: "Zalando Sans", Arial, sans-serif;
     padding: 0 1rem;
     margin: 0;
+    background-color: white;
+    color: black;
 
 }
 
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+
 header {
     display: flex;
-    justify-content: space-between;
+
     padding: 0 1rem;   
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#darkToggle {
+    margin-left: auto;
 }
 
 .container {
@@ -21,8 +38,7 @@ nav {
     list-style: none;
     gap: 1.5rem;
     align-items: center;
-    justify-content: center;
-    margin-left: auto;
+
 }
 
 .navbar {
