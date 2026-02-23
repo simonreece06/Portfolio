@@ -24,12 +24,14 @@ button {
   cursor: pointer;
 }
 
-#darkToggle {
+#counter {
     margin-left: auto;
+    background-color: red;
 }
-
+#resetButton {
+    display: none;
+}
 .container {
-
     margin: 0 auto;      
     padding: 0;  
 }
