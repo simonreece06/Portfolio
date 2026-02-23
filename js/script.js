@@ -70,13 +70,15 @@ function getRandomColor() {
     return color;
 }
 //make the colour load of the button
-if (localStorage.getItem("clickyColour")) {
-    clickyButton.style.backgroundColor = localStorage.getItem("clickyColour");
-}
+const savedColour = localStorage.getItem("clickyColour") || "red";
+clickyButton.style.backgroundColor = savedColour;
+clickyButton.style.display = "inline-block";
+
 
 //make reset button appear if count is not 0;
-if (localStorage.getItem("count") != null) {
+if (Number(localStorage.getItem("count")) > 0 ) {
     resetButton.style.display="inline-block";
+    clickyButton.textContent = "ClickMe! " + Number(localStorage.getItem("count"));
 }
 
 clickyButton.addEventListener("click", () => {
@@ -97,6 +99,7 @@ resetButton.addEventListener("click", () => {
     clickyButton.textContent = "Click Me!";
     resetButton.style.display = "none";
     clickyButton.style.backgroundColor = "red";
+    localStorage.setItem("clickyColour", "red");
 
  })
 

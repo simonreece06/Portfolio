@@ -27,6 +27,7 @@ button {
 #counter {
     margin-left: auto;
     background-color: red;
+    display: none;
 }
 #resetButton {
     display: none;
