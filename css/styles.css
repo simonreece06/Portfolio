@@ -12,6 +12,17 @@ body.dark {
   color: white;
 }
 
+.high-score {
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.timer {
+    display: none;
+}
 
 header {
     display: flex;

@@ -1,5 +1,5 @@
 //DARK THEME
-
+//localStorage.clear() 
 const toggleButton = document.getElementById("darkToggle");
 
 // Load saved theme
@@ -74,16 +74,31 @@ const savedColour = localStorage.getItem("clickyColour") || "red";
 clickyButton.style.backgroundColor = savedColour;
 clickyButton.style.display = "inline-block";
 
+//show high-score
+
+if (localStorage.getItem("high-score") != null) {
+    document.querySelector(".high-score").textContent = "High Score: " + localStorage.getItem("high-score");
+}
+
+
 
 //make reset button appear if count is not 0;
 if (Number(localStorage.getItem("count")) > 0 ) {
     resetButton.style.display="inline-block";
     clickyButton.textContent = "ClickMe! " + Number(localStorage.getItem("count"));
+    
 }
 
 clickyButton.addEventListener("click", () => {
     let counter = localStorage.getItem("count");
     counter = Number(counter) + 1;
+    //setting high score here
+    if (localStorage.getItem("high-score") <= counter) {
+        localStorage.setItem("high-score", counter);
+        document.querySelector(".high-score").textContent = "High Score: " + localStorage.getItem("high-score");
+        clickyButton.textContent = "ClickMe! " + Number(localStorage.getItem("count"));
+    }
+    
     clickyButton.textContent = "Click Me! " + counter;
     localStorage.setItem("count", counter);
     resetButton.style.display = "inline-block";
@@ -103,3 +118,36 @@ resetButton.addEventListener("click", () => {
 
  })
 
+//now the timer
+
+const timerElement = document.querySelector(".timer");
+
+let seconds = 0;
+if (localStorage.getItem("seconds")) {
+    seconds = Number(localStorage.getItem("seconds"));
+    timerElement.style.display = 'inline-block';
+}
+
+
+//from chatGPT
+function formatTime(seconds) {
+    const days = Math.floor(seconds / 86400); // 86400 sec in a day
+    const hours = Math.floor((seconds % 86400) / 3600); // remaining hours
+    const minutes = Math.floor((seconds % 3600) / 60); // remaining minutes
+    const secs = seconds % 60; // remaining seconds
+
+    return `${days}d ${hours}h ${minutes}m ${secs}s`;
+}
+
+
+
+
+
+
+const timer = () => {
+    seconds += 1;
+    timerElement.textContent = "You have been on this page for " + formatTime(seconds) + " seconds.";
+    localStorage.setItem("seconds", seconds);
+}
+
+setInterval(timer, 1000);
