@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=block" rel="stylesheet">
         <!-- fonts are Zalando Sans, Barriecito, Open Sans -->
         <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class= "container">
@@ -18,10 +19,10 @@
             <button id="darkToggle">Dark Mode</button>
             <nav>                
                 <ul class='navbar' >
-                    <li class="nav-item">About me</li>
-                    <li class="nav-item">Current history</li>
-                    <li class="nav-item">Outside of coding</li>
-                    <li class="nav-item">Contact details</li>
+                    <li class="nav-item"><a href="#about-me">About me</a></li>
+                    <li class="nav-item"><a href="#history">Current history</a></li>
+                    <li class="nav-item"><a href="#outside">Outside of coding</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact Details</a></li>
                 </ul>
             </nav>            
         </header>
@@ -33,7 +34,7 @@
         </section>
         <main>
             <section>
-                <div class="about-me">
+                <div class="about-me" id="about-me">
                     <h3>About Me</h3>
                     <p>I'm just a dude learning to code. Maybe one day I'll know front end or back end, or both.</p>
                     <p>Below you'll find some projects I've done and some more info about me</p>
@@ -41,7 +42,7 @@
                 </div>
             </section>
             <section>
-                <div class="current-history"> <!-- will list projects (like 2-4) using flex, 2 x 2 config?-->
+                <div class="current-history" id="history"> <!-- will list projects (like 2-4) using flex, 2 x 2 config?-->
                     <h3>Previous Projects</h3>
                 </div>
                 <div class="projects-container">

@@ -151,3 +151,4 @@ const timer = () => {
 }
 
 setInterval(timer, 1000);
+

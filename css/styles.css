@@ -7,6 +7,11 @@ body {
 
 }
 
+a {
+    text-decoration: none;  /* removes underline */
+    color: inherit;          /* uses parent text color */
+}
+
 body.dark {
   background-color: #121212;
   color: white;
@@ -26,7 +31,6 @@ body.dark {
 
 header {
     display: flex;
-
     padding: 0 1rem;   
 }
 
@@ -106,13 +110,7 @@ h3 {
     
 }  
 
-@media (max-width: 900px) {
-  .projects-container { grid-template-columns: repeat(2, 1fr); }
-}
 
-@media (max-width: 600px) {
-  .projects-container { grid-template-columns: 1fr; }
-}
 
 .project-card {
     background: white;
@@ -143,4 +141,26 @@ h3 {
 
 .project-text {
     min-width: 0;
+}
+
+
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+
 }
